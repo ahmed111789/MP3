@@ -1,4 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.db
+
+# Virtual environments
+venv/
+.env/
+
+# ROS 2 build folders
 build/
 install/
 log/
+
+# VS Code
+.vscode/
+
+# Model weights
 *.pt
+*.onnx
+
+# Images / generated data
+*.jpg
+*.png
+
+# Face detection output
+/tmp/
+/detected_faces/
+
+# OS
+.DS_Store
+
