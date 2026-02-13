@@ -2,8 +2,8 @@
 
 ### Dependencies
 
-pip3 install ultralytics opencv-python
-sudo apt install ros-humble-usb-cam
+pip3 install ultralytics opencv-python\n
+sudo apt install ros-humble-usb-cam\n
 sudo apt install ros-humble-cv-bridge
 
 #### Note: 
