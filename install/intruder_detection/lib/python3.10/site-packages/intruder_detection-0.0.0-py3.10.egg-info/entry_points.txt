@@ -1,0 +1,3 @@
+[console_scripts]
+intruder_detection = intruder_detection.intruder_detection:main
+

@@ -1,0 +1,41 @@
+[0.583s] Invoking command in '/home/batata/SEC_MP3/src/intruder_detection': PYTHONPATH=/home/batata/SEC_MP3/build/intruder_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/intruder_detection build --build-base /home/batata/SEC_MP3/build/intruder_detection/build install --record /home/batata/SEC_MP3/build/intruder_detection/install.log --single-version-externally-managed install_data
+[0.798s] running egg_info
+[0.798s] creating ../../build/intruder_detection/intruder_detection.egg-info
+[0.798s] writing ../../build/intruder_detection/intruder_detection.egg-info/PKG-INFO
+[0.799s] writing dependency_links to ../../build/intruder_detection/intruder_detection.egg-info/dependency_links.txt
+[0.799s] writing entry points to ../../build/intruder_detection/intruder_detection.egg-info/entry_points.txt
+[0.799s] writing requirements to ../../build/intruder_detection/intruder_detection.egg-info/requires.txt
+[0.799s] writing top-level names to ../../build/intruder_detection/intruder_detection.egg-info/top_level.txt
+[0.799s] writing manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+[0.800s] reading manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+[0.801s] writing manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+[0.801s] running build
+[0.801s] running build_py
+[0.801s] creating /home/batata/SEC_MP3/build/intruder_detection/build
+[0.801s] creating /home/batata/SEC_MP3/build/intruder_detection/build/lib
+[0.801s] creating /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+[0.801s] copying intruder_detection/__init__.py -> /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+[0.801s] copying intruder_detection/intruder_detection.py -> /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+[0.801s] running install
+[0.802s] running install_lib
+[0.802s] creating /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+[0.802s] copying /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection/__init__.py -> /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+[0.802s] copying /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection/intruder_detection.py -> /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+[0.803s] byte-compiling /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection/__init__.py to __init__.cpython-310.pyc
+[0.803s] byte-compiling /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection/intruder_detection.py to intruder_detection.cpython-310.pyc
+[0.804s] running install_data
+[0.804s] creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index
+[0.804s] creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index
+[0.804s] creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index/packages
+[0.804s] copying resource/intruder_detection -> /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index/packages
+[0.804s] copying package.xml -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection
+[0.804s] creating /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/launch
+[0.804s] copying launch/alert_example.launch.py -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/launch
+[0.804s] creating /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/config
+[0.805s] copying config/alert.yaml -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/config
+[0.805s] running install_egg_info
+[0.806s] Copying ../../build/intruder_detection/intruder_detection.egg-info to /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection-0.0.0-py3.10.egg-info
+[0.807s] running install_scripts
+[0.824s] Installing intruder_detection script to /home/batata/SEC_MP3/install/intruder_detection/lib/intruder_detection
+[0.824s] writing list of installed files to '/home/batata/SEC_MP3/build/intruder_detection/install.log'
+[0.850s] Invoked command in '/home/batata/SEC_MP3/src/intruder_detection' returned '0': PYTHONPATH=/home/batata/SEC_MP3/build/intruder_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/intruder_detection build --build-base /home/batata/SEC_MP3/build/intruder_detection/build install --record /home/batata/SEC_MP3/build/intruder_detection/install.log --single-version-externally-managed install_data

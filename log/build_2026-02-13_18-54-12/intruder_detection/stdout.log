@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/intruder_detection/intruder_detection.egg-info
+writing ../../build/intruder_detection/intruder_detection.egg-info/PKG-INFO
+writing dependency_links to ../../build/intruder_detection/intruder_detection.egg-info/dependency_links.txt
+writing entry points to ../../build/intruder_detection/intruder_detection.egg-info/entry_points.txt
+writing requirements to ../../build/intruder_detection/intruder_detection.egg-info/requires.txt
+writing top-level names to ../../build/intruder_detection/intruder_detection.egg-info/top_level.txt
+writing manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+reading manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+writing manifest file '../../build/intruder_detection/intruder_detection.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/batata/SEC_MP3/build/intruder_detection/build
+creating /home/batata/SEC_MP3/build/intruder_detection/build/lib
+creating /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+copying intruder_detection/__init__.py -> /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+copying intruder_detection/intruder_detection.py -> /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection
+running install
+running install_lib
+creating /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+copying /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection/__init__.py -> /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+copying /home/batata/SEC_MP3/build/intruder_detection/build/lib/intruder_detection/intruder_detection.py -> /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection
+byte-compiling /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection/intruder_detection.py to intruder_detection.cpython-310.pyc
+running install_data
+creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index
+creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index
+creating /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index/packages
+copying resource/intruder_detection -> /home/batata/SEC_MP3/install/intruder_detection/share/ament_index/resource_index/packages
+copying package.xml -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection
+creating /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/launch
+copying launch/alert_example.launch.py -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/launch
+creating /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/config
+copying config/alert.yaml -> /home/batata/SEC_MP3/install/intruder_detection/share/intruder_detection/config
+running install_egg_info
+Copying ../../build/intruder_detection/intruder_detection.egg-info to /home/batata/SEC_MP3/install/intruder_detection/lib/python3.10/site-packages/intruder_detection-0.0.0-py3.10.egg-info
+running install_scripts
+Installing intruder_detection script to /home/batata/SEC_MP3/install/intruder_detection/lib/intruder_detection
+writing list of installed files to '/home/batata/SEC_MP3/build/intruder_detection/install.log'
