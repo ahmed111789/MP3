@@ -88,10 +88,16 @@ class HumanDetector(Node):
 
         # YOLO 
         results = self.model(frame, conf=self.conf_threshold, verbose=False)
-
+        
+        display_frame = frame.copy()
         person_detected = False
         now = time.time()
-
+        testing_variable = (now - self.last_save_face_time) > (1/self.save_face_frequency)
+        i_did_save = False
+        number = 0
+        if testing_variable:
+                i_did_save = True
+                number = 0
         for r in results:
             for box in r.boxes:
                 cls = int(box.cls[0])
@@ -104,9 +110,9 @@ class HumanDetector(Node):
                     conf = float(box.conf[0])
 
                     # Draw person box
-                    cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
+                    cv2.rectangle(display_frame, (x1, y1), (x2, y2), (0, 0, 255), 2)
                     cv2.putText(
-                        frame,
+                        display_frame,
                         f"Person {conf:.2f}",
                         (x1, y1 - 5),
                         cv2.FONT_HERSHEY_SIMPLEX,
@@ -115,8 +121,8 @@ class HumanDetector(Node):
                         2
                     )
 
-                    # Crop person region
-                    person_roi = frame
+                    
+                    person_roi = frame[y1:y2, x1:x2]
                     if person_roi.size == 0:
                         continue
 
@@ -131,14 +137,18 @@ class HumanDetector(Node):
                     )
                     
                     # Save face only once per alert
-                    if self.save_face_frequency != 0.0 and (now - self.last_save_face_time) > (1/self.save_face_frequency):
-                        for number,(fx, fy, fw, fh) in enumerate(faces):
-                            face_img = frame[fy:fy+fh, fx:fx+fw]
+                    if self.save_face_frequency != 0.0 and i_did_save:
+                        for (fx, fy, fw, fh) in faces:
+                            face_img = person_roi[fy:fy+fh, fx:fx+fw]
                             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                             filename = f"{self.face_dir}/face_{timestamp}_n{number}.jpg"
+                            number += 1
+                            print("saved:"+filename)
+
                             
                             if self.saved_face_topic != "":
                                 self.alert_face.publish(self.bridge.cv2_to_imgmsg(face_img))
+                            
                             
                             self.last_save_face_time = now
                             cv2.imwrite(filename, face_img)
@@ -148,12 +158,12 @@ class HumanDetector(Node):
                         
                         # Draw face box
                         cv2.rectangle(
-                            person_roi,
-                            (fx, fy),
-                            (fx+fw, fy+fh),
-                            (255, 0, 0),
-                            2
-                        )
+                                display_frame,
+                                (x1 + fx, y1 + fy),
+                                (x1 + fx + fw, y1 + fy + fh),
+                                (255, 0, 0),
+                                2
+                                )
                         
 
                     
@@ -169,7 +179,7 @@ class HumanDetector(Node):
 
         if self.debug_mode:
             # Debug view
-            cv2.imshow("Security Robot - YOLO Detector", frame)
+            cv2.imshow("Security Robot - YOLO Detector", display_frame)
             cv2.waitKey(1)
 
 
