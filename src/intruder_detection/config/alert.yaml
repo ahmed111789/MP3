@@ -1,8 +1,8 @@
 human_detector:
   ros__parameters:
     debug_mode: true                      # Allows a popup to see the boxes
-    alert_frequency: 5.0                  # In Hz (How many times per second)
-    save_face_frequency: 0.1              # Save/publish face in Hz, stops saving faces if set to 0.0
+    alert_frequency: 5.0                  # Alerts 5 times in a second
+    save_face_frequency: 0.1              # Save/publish face every 2 seconds, stops saving faces if set to 0.0
     camera_topic: "/image_raw"            # Camera topic name 
     saved_face_topic: null             # Broadcasts faces when detected, set to "None" (string) to stop
     save_face_path: "/tmp/detected_faces" # Where to save the face pic
