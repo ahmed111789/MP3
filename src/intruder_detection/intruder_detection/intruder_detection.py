@@ -24,7 +24,7 @@ class HumanDetector(Node):
         # Parameters
         self.declare_parameter('debug_mode', True)
         self.declare_parameter('alert_frequency', 5.0)
-        self.declare_parameter('saved_face_topic', 'None')
+        self.declare_parameter('saved_face_topic', "")
         self.declare_parameter('camera_topic', '/image_raw')
         self.declare_parameter('save_face_frequency', 0.2) # About 10 seconds, set to zero to disallow saving faces
         self.declare_parameter('save_face_path', '/tmp/detected_faces')
@@ -50,7 +50,7 @@ class HumanDetector(Node):
         # ROS
         self.bridge = CvBridge()
         self.alert_pub = self.create_publisher(String, '/alert_detected', alert_qos)
-        if self.saved_face_topic != 'None' and self.alert_frequency > 0.0:
+        if self.saved_face_topic != "" and self.alert_frequency > 0.0:
             self.alert_face = self.create_publisher(Image,self.saved_face_topic,alert_qos)
         self.subscription = self.create_subscription(
             Image,
@@ -137,7 +137,7 @@ class HumanDetector(Node):
                             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                             filename = f"{self.face_dir}/face_{timestamp}_n{number}.jpg"
                             
-                            if self.saved_face_topic != 'None':
+                            if self.saved_face_topic != "":
                                 self.alert_face.publish(self.bridge.cv2_to_imgmsg(face_img))
                             
                             self.last_save_face_time = now
